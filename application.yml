@@ -16,6 +16,7 @@ eureka:
       registryFetchIntervalSeconds: 10 # 30 for production?
   instance:
     leaseRenewalIntervalInSeconds: 10 # should be set to 30 for production
+    preferIpAddress: true
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 
