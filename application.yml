@@ -15,6 +15,9 @@ eureka:
     serviceUrl:
       defaultZone: http://${EUREKA_HOST:127.0.0.1}:8761/eureka/
       registryFetchIntervalSeconds: 10 # 30 for production?
+      eurekaServerDNSName: ${EUREKA_HOST:localhost}
+      eurekaServerPort: 8761
+
   instance:
     leaseRenewalIntervalInSeconds: 10 # should be set to 30 for production
     prefer-ip-address: true
