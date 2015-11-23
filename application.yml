@@ -17,7 +17,7 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10 # should be set to 30 for production
     prefer-ip-address: true
-    hostnamne: ${EUREKA_HOST:localhost}
+    hostname: ${EUREKA_HOST:localhost}
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 
