@@ -12,11 +12,12 @@ logging:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://127.0.0.1:8761/eureka/}
+      defaultZone: http://${EUREKA_HOST:127.0.0.1}:8761/eureka/
       registryFetchIntervalSeconds: 10 # 30 for production?
   instance:
     leaseRenewalIntervalInSeconds: 10 # should be set to 30 for production
-    preferIpAddress: true
+    prefer-ip-address: true
+    hostnamne: ${EUREKA_HOST:localhost}
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 
