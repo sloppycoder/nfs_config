@@ -7,7 +7,7 @@ server:
 logging:
   level:
     root: INFO
-    com.netflix.discovery: WARN
+    com.netflix.discovery.DiscoveryClient: DEBUG
 
 eureka:
   client:
