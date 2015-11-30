@@ -8,15 +8,17 @@ logging:
   level:
     root: INFO
     com.netflix.discovery: WARN
+    #com.netflix.discovery.DiscoveryClient: DEBUG
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://127.0.0.1:8761/eureka/}
+      defaultZone: http://${EUREKA_HOST:localhost}:8761/eureka/
       registryFetchIntervalSeconds: 10 # 30 for production?
+
   instance:
     leaseRenewalIntervalInSeconds: 10 # should be set to 30 for production
-    preferIpAddress: true
+    prefer-ip-address: true
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 

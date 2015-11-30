@@ -14,9 +14,6 @@ server:
 logging:
   level:
     root: INFO
-    org.apache.http: WARN
-    com.netflix: WARN
-    CustomerClient: DEBUG
     org.springframework.security: INFO
 
 security:
